@@ -17,20 +17,12 @@ module.exports = {
       },
       {
         test: /\.(png|jpg|gif|svg)$/,
-        loader: "file-loader",
-        options: {
-          publicPath: "./dist/",
-          name: "[name].[ext]?[hash]",
-        },
-      },
-      {
-        test: /\.(png|jpg|gif|svg)$/,
         use: {
           loader: "url-loader",
           options: {
             publicPath: "./dist/",
             name: "[name].[ext]?[hash]",
-            limit: 5000,
+            limit: 10000,
           },
         },
       },
